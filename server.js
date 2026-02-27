@@ -6,6 +6,7 @@
  *   GET  /api/categories        – distinct category list
  *   POST /api/checkout          – create order
  *   GET  /api/orders/:id        – fetch order by id (confirmation page)
+ *   POST /api/seed              – seed products into MongoDB (requires SEED_SECRET header)
  */
 
 require('dotenv').config();
@@ -15,8 +16,9 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI;
+const PORT        = process.env.PORT        || 3000;
+const MONGO_URI   = process.env.MONGO_URI;
+const SEED_SECRET = process.env.SEED_SECRET;
 
 // ─── Middleware ──────────────────────────────────────────────────────────────
 app.use(cors());
@@ -200,6 +202,67 @@ app.get('/api/orders/:id', async (req, res) => {
     res.json(order);
   } catch (err) {
     res.status(400).json({ error: 'Invalid order ID' });
+  }
+});
+
+/**
+ * POST /api/seed
+ * Seeds the products collection from data/products.json.
+ * Protected by the SEED_SECRET environment variable.
+ *
+ * Usage (curl):
+ *   curl -X POST https://your-domain.vercel.app/api/seed \
+ *        -H "x-seed-secret: YOUR_SECRET"
+ *
+ * ⚠️  Only call this ONCE after first deploy, or when you want to reset products.
+ *     It drops and recreates the products collection.
+ */
+app.post('/api/seed', async (req, res) => {
+  // ── Auth check ──────────────────────────────────────────────────────────
+  if (!SEED_SECRET) {
+    return res.status(503).json({
+      error: 'Seeding is disabled. Set the SEED_SECRET environment variable to enable it.',
+    });
+  }
+
+  const providedSecret =
+    req.headers['x-seed-secret'] || req.query.secret || '';
+
+  if (providedSecret !== SEED_SECRET) {
+    return res.status(401).json({ error: 'Invalid or missing seed secret.' });
+  }
+
+  // ── Seed logic ──────────────────────────────────────────────────────────
+  try {
+    const products = require('./data/products.json');
+
+    // Drop existing products to avoid duplicates on re-seed
+    const collections = await db
+      .listCollections({ name: 'products' })
+      .toArray();
+
+    if (collections.length > 0) {
+      await db.collection('products').drop();
+    }
+
+    const result = await db.collection('products').insertMany(products);
+
+    // Recreate indexes
+    await db.collection('products').createIndex({ category: 1 });
+    await db
+      .collection('products')
+      .createIndex({ name: 'text', description: 'text' });
+    await db.collection('orders').createIndex({ createdAt: -1 });
+
+    console.log(`[seed] Inserted ${result.insertedCount} products via API`);
+
+    res.status(200).json({
+      message: `Seeded ${result.insertedCount} products successfully.`,
+      insertedCount: result.insertedCount,
+    });
+  } catch (err) {
+    console.error('[seed] Error:', err.message);
+    res.status(500).json({ error: 'Seeding failed: ' + err.message });
   }
 });
 

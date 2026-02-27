@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "vercel-build": "echo 'Build complete. Run POST /api/seed with your SEED_SECRET to seed the database.'"
   },
   "keywords": ["ecommerce", "mongodb", "express", "marketplace"],
   "author": "Pranavv2006",
