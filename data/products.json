@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Sony WH-1000XM5 Headphones",
+    "price": 349.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600&q=80",
+    "description": "Industry-leading noise canceling with Dual Noise Sensor technology. 30hr battery life, multipoint connection, and crystal-clear hands-free calling.",
+    "rating": 4.9,
+    "reviews": 2847,
+    "stock": 45,
+    "badge": "Best Seller"
+  },
+  {
+    "name": "Apple MacBook Air M3",
+    "price": 1299.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
+    "description": "Supercharged by M3 chip. Up to 18 hours of battery life. 13.6-inch Liquid Retina display. 8GB unified memory.",
+    "rating": 4.8,
+    "reviews": 1523,
+    "stock": 20,
+    "badge": "New"
+  },
+  {
+    "name": "Nike Air Jordan 1 Retro",
+    "price": 179.99,
+    "category": "footwear",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",
+    "description": "The shoe that started it all. Classic silhouette reimagined with premium leather upper and Air-Sole unit for legendary cushioning.",
+    "rating": 4.7,
+    "reviews": 4201,
+    "stock": 80,
+    "badge": "Hot"
+  },
+  {
+    "name": "Samsung 4K OLED Monitor 27\"",
+    "price": 799.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80",
+    "description": "Quantum Dot OLED technology with 240Hz refresh rate. DisplayHDR True Black 400. Perfect for creators and gamers alike.",
+    "rating": 4.6,
+    "reviews": 892,
+    "stock": 15,
+    "badge": "Sale"
+  },
+  {
+    "name": "Levi's 512 Slim Taper Jeans",
+    "price": 69.99,
+    "category": "clothing",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80",
+    "description": "Slim through the hip and thigh with a taper to the ankle. Made with stretch denim for all-day comfort.",
+    "rating": 4.5,
+    "reviews": 3102,
+    "stock": 200,
+    "badge": ""
+  },
+  {
+    "name": "Rolex Submariner Watch",
+    "price": 9999.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80",
+    "description": "The quintessential diver's watch. Oystersteel case, unidirectional rotatable bezel, waterproof to 300m. A timeless icon.",
+    "rating": 5.0,
+    "reviews": 451,
+    "stock": 5,
+    "badge": "Premium"
+  },
+  {
+    "name": "DJI Mini 4 Pro Drone",
+    "price": 759.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?w=600&q=80",
+    "description": "4K/60fps HDR video. Omnidirectional obstacle sensing. 34-min max flight time. Foldable design under 249g.",
+    "rating": 4.8,
+    "reviews": 1247,
+    "stock": 30,
+    "badge": "New"
+  },
+  {
+    "name": "The North Face Nuptse Jacket",
+    "price": 299.99,
+    "category": "clothing",
+    "image": "https://images.unsplash.com/photo-1544923246-77307dd654cb?w=600&q=80",
+    "description": "700-fill goose down insulation in the iconic boxy silhouette. Water-resistant shell. Packs into its own pocket.",
+    "rating": 4.7,
+    "reviews": 2891,
+    "stock": 60,
+    "badge": "Best Seller"
+  },
+  {
+    "name": "Kindle Paperwhite 16GB",
+    "price": 149.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1511511450688-e15a12ccb99b?w=600&q=80",
+    "description": "6.8\" glare-free display. Adjustable warm light. Up to 10 weeks of battery. Waterproof IPX8. Stores thousands of books.",
+    "rating": 4.6,
+    "reviews": 5622,
+    "stock": 120,
+    "badge": ""
+  },
+  {
+    "name": "Ray-Ban Aviator Sunglasses",
+    "price": 164.99,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80",
+    "description": "Classic double bridge metal frame with crystal lenses. 100% UV protection. The original aviator since 1936.",
+    "rating": 4.4,
+    "reviews": 3877,
+    "stock": 90,
+    "badge": ""
+  },
+  {
+    "name": "Adidas Ultraboost 23",
+    "price": 189.99,
+    "category": "footwear",
+    "image": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80",
+    "description": "BOOST midsole returns energy with every step. Primeknit+ upper adapts to your foot. Continental rubber outsole.",
+    "rating": 4.6,
+    "reviews": 2134,
+    "stock": 75,
+    "badge": "Sale"
+  },
+  {
+    "name": "Louis Vuitton Neverfull Tote",
+    "price": 1490.00,
+    "category": "accessories",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+    "description": "Iconic Monogram canvas tote in GM size. Natural cowhide leather trim. Removable zip pouch included.",
+    "rating": 4.9,
+    "reviews": 723,
+    "stock": 10,
+    "badge": "Luxury"
+  },
+  {
+    "name": "PlayStation 5 Console",
+    "price": 499.99,
+    "category": "electronics",
+    "image": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80",
+    "description": "Ultra-high speed SSD. 4K-TV gaming. Up to 120fps. Ray tracing. HDR. Tempest 3D AudioTech.",
+    "rating": 4.8,
+    "reviews": 9823,
+    "stock": 8,
+    "badge": "Hot"
+  },
+  {
+    "name": "Uniqlo Ultra Light Down Jacket",
+    "price": 59.99,
+    "category": "clothing",
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80",
+    "description": "Feather-light 90/10 down fill. Packs into its own pocket for easy carrying. Wind and water resistant outer shell.",
+    "rating": 4.5,
+    "reviews": 6741,
+    "stock": 300,
+    "badge": ""
+  },
+  {
+    "name": "Dyson V15 Detect Vacuum",
+    "price": 749.99,
+    "category": "home",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    "description": "Laser detects invisible dust. Piezo sensor proves dust is gone. Up to 60min run time. HEPA filtration.",
+    "rating": 4.7,
+    "reviews": 1892,
+    "stock": 25,
+    "badge": "New"
+  },
+  {
+    "name": "Nespresso Vertuo Pop Coffee",
+    "price": 99.99,
+    "category": "home",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    "description": "Centrifusion technology for perfect crema. Compatible with all Vertuo capsules. 5 cup sizes. Fast heat-up in 30 seconds.",
+    "rating": 4.4,
+    "reviews": 4231,
+    "stock": 55,
+    "badge": ""
+  }
+]
