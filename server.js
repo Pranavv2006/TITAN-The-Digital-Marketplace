@@ -20,12 +20,10 @@ const PORT        = process.env.PORT        || 3000;
 const MONGO_URI   = process.env.MONGO_URI;
 const SEED_SECRET = process.env.SEED_SECRET;
 
-// ─── Middleware ──────────────────────────────────────────────────────────────
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ─── DB Connection ──────────────────────────────────────────────────────────
 let db;
 
 async function connectDB() {
@@ -39,15 +37,6 @@ async function connectDB() {
   console.log('MongoDB Atlas connected');
 }
 
-// ─── Routes ─────────────────────────────────────────────────────────────────
-
-/**
- * GET /api/products
- * Supports optional query params:
- *   ?category=electronics
- *   ?search=headphones
- *   ?sort=price_asc | price_desc | rating
- */
 app.get('/api/products', async (req, res) => {
   try {
     const { category, search, sort } = req.query;
